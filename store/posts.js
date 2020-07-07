@@ -18,7 +18,6 @@ export const actions = {
           let rand = Math.round(Math.random());
           contents[i].category = category[rand];
         }
-        console.log(res.data);
         commit("SET_POSTS", res.data);
       })
       .catch(e => {

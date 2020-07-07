@@ -32,7 +32,6 @@ export default {
       const result = await this.$axios
         .get(API_URL)
         .then(res => {
-          console.log(res);
           this.blog = res.data;
         })
         .catch(e => {
@@ -45,7 +44,6 @@ export default {
       const result = await this.$axios
         .get(API_URL)
         .then(res => {
-          console.log(res);
           this.user = res.data;
         })
         .catch(e => {

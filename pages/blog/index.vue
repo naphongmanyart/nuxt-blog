@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       <content-list
-        class="content"
+        class="content mx-4"
         v-for="(content, index) in filteredCategory"
         :key="index"
         :post="content"
@@ -40,7 +40,6 @@ export default {
     filteredCategory() {
       let category = this.selected;
       if ((category === 'all')) {
-        console.log(category);
         return this.contents;
       } else {
         return this.contents.filter(content => {
@@ -53,7 +52,6 @@ export default {
     let sync = await this.$store.dispatch('posts/fetch');
     let data = await this.getPosts;
     this.contents = data;
-    console.log(this.contents);
   },
   methods: {
   }
@@ -63,9 +61,5 @@ export default {
 <style lang="scss" scoped>
 .page-title {
   margin-bottom: 24px;
-}
-
-.row {
-  justify-content: space-between;
 }
 </style>
